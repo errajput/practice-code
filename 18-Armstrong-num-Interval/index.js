@@ -1,4 +1,4 @@
-const minNum = 8;
+const minNum = 1;
 const maxNum = 500;
 console.log("Armstrong number");
 for (let i = minNum; i <= maxNum; i++) {
