@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <input
+        type="number"
+        id="celsius"
+        placeholder="Enter Celsius temperature"
+      /><br /><br />
+      <button onclick="convertTemperature()">Convert</button><br /><br />
+      <p class="result" id="result"></p>
+    </div>
+    <script>
+      function convertTemperature() {
+        const celsiusValue = parseFloat(
+          document.getElementById("celsius").value
+        );
+
+        if (isNaN(celsiusValue)) {
+          document.getElementById("result").textContent =
+            "Please enter a valid number.";
+          return;
+        }
+        const fahrenheit = (celsiusValue * 9) / 5 + 32;
+        const roundedFahrenheit = fahrenheit.toFixed(2);
+        document.getElementById(
+          "result"
+        ).textContent = `${celsiusValue}°C is equal to ${roundedFahrenheit}°F`;
+      }
+    </script>
+  </body>
+</html>

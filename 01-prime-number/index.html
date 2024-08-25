@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-PrimeNumber</title>
+  </head>
+  <body>
+    <h1>01-PrimeNumber</h1>
+    <div>
+      <h2>1. One Number</h2>
+      <div>
+        <label for="number">Enter a Number</label>
+        <input type="number" id="number" />
+        O/P:<span id="numberIsPrime"></span>
+      </div>
+    </div>
+    <h2>2. Multiple Numbers</h2>
+    <h2>3. Range of Numbers</h2>
+  </body>
+  <script>
+    const numberElement = document.querySelector("#number");
+    const numberIsPrime = document.querySelector("#numberIsPrime");
+    numberElement.addEventListener("change", function handleChange() {
+      console.log("change ");
+      console.log(numberElement.value);
+      const isPrime = isNumberPrime(numberElement.value);
+      if (isPrime) {
+        numberIsPrime.innerHTML = "number is prime";
+      } else {
+        numberIsPrime.innerHTML = "number is not prime";
+      }
+    });
+  </script>
+  <script src="main.js"></script>
+</html>

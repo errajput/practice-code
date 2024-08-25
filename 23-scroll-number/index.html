@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-number</title>
+  </head>
+  <body>
+    <h1>Scroll-number</h1>
+    <p>
+      min <span minValue> <input type="number" id="min" /></span>
+    </p>
+    <p>
+      max <span maxValue> <input type="number" id="max" /></span>
+    </p>
+    <button id="submit">get armstrong value</button>
+  </body>
+  <script>
+    const minElement = document.getElementById("min");
+    const maxElement = document.getElementById("man");
+    const submitbtn = document.getElementById("submit");
+    minElement.addEventListener("click", function () {
+      minElement.innerHTML =
+        parseInt(minElement.value) + parseInt(maxElement.value);
+    });
+  </script>
+</html>
