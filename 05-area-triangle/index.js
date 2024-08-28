@@ -1,7 +1,16 @@
-const side1 = 3;
-const side2 = 4;
-const side3 = 5;
+function calculateArea() {
+  let A = parseInt(document.getElementById("sideA").value);
+  let B = parseInt(document.getElementById("sideB").value);
+  let C = parseInt(document.getElementById("sideC").value);
+  let area, semiPerimeter;
 
-const s = (side1 + side2 + side3) / 2;
-const area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
-console.log(`the area of a triangle ${area}`);
+  semiPerimeter = (A + B + C) / 2;
+  area = Math.sqrt(
+    semiPerimeter *
+      (semiPerimeter - A) *
+      (semiPerimeter - B) *
+      (semiPerimeter - C)
+  );
+
+  document.getElementById("result").textContent = area.toFixed(2);
+}
