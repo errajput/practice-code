@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even- odd</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Even-Odd</h1>
+      <div>
+        <label for="number">Enter a Number</label>
+        <input type="number" id="number" placeholder="enter a number" />
+
+        <button type="submit">Submit</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script>
+    const element = document.querySelector("button");
+    const elementNumber = document.querySelector("#number");
+    const result = document.querySelector("#result");
+    element.addEventListener("click", () => {
+      const evenNum = isEven(elementNumber.value);
+      if (evenNum) {
+        result.innerHTML = `Number is Even`;
+      } else {
+        result.innerHTML = "Number is Odd";
+      }
+    });
+  </script>
+</html>
