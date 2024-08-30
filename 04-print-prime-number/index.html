@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+    <link rel="stylesheet" href="styyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prime-Number</h1>
+      <div>
+        <label for="number">Min Number</label>
+        <input type="number" id="number1" placeholder="enter the number" />
+        <label for="number">Max Number</label>
+        <input type="number" id="number2" placeholder="enter the number" />
+        <button type="submit">Submit</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script>
+    const elementNum1 = document.querySelector("#number1");
+    const elementNum2 = document.querySelector("#number2");
+    const btn = document.querySelector("button");
+    const result = document.querySelector("#result");
+    btn.addEventListener("click", () => {
+      const primeNumber = printPrimeNumbers(number1.value, number2.value);
+      result.innerHTML = primeNumber;
+    });
+  </script>
+</html>
