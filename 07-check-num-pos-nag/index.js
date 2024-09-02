@@ -1,5 +1,5 @@
-function checkNumber() {
-  const num = -19;
+function checkNumber(num) {
+  // const num = -19;
   if (num >= 0) {
     if (num == 0) {
       console.log("the number is zero");
@@ -11,4 +11,4 @@ function checkNumber() {
   }
 }
 
-checkNumber();
+checkNumber(-19);

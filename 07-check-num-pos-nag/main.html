@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checking-Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>checking-Number</h1>
+      <div>
+        <label for="number">Enter the number</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="enter a number"
+        />
+        <button type="submit">Submit</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="index.js"></script> -->
+  <script>
+    const button = document.querySelector("button");
+    const result = document.querySelector("#result");
+    const elementNumber = document.querySelector("#number");
+    button.addEventListener("click", () => {
+      let num = parseInt(elementNumber.value);
+      if (num >= 0) {
+        if (num == 0) {
+          result.innerHTML = `the number is zero`;
+        } else {
+          result.innerHTML = `the number is positive`;
+        }
+      } else {
+        result.innerHTML = `the number is negative`;
+      }
+    });
+  </script>
+</html>
