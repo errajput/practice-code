@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kilometer to miles</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kilometer to miles</h1>
+      <div>
+        <label for="number">Enter km value</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="enter a number"
+        />
+        <button type="submit">Submit</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script>
+    const numberElement = document.querySelector("#number");
+
+    const button = document.querySelector("button");
+    const result = document.querySelector("#result");
+    button.addEventListener("click", () => {
+      const kilToMile = kmToMiles(parseInt(numberElement.value));
+      result.innerHTML = `${numberElement.value} kilometer is equal to ${kilToMile} miles `;
+      //   result.innerHTML = kilToMile;
+    });
+  </script>
+</html>
