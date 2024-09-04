@@ -9,5 +9,6 @@ function largestNum(num, num2, num3) {
   }
   // largest = Math.max(num, num2,num3)
   console.log("The largest number is " + largest);
+  return largest;
 }
 largestNum(1, 37, 8);
